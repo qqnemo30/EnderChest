@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Cherry
+  - Book
+  - Ladder
+  - Enemy
+  - Animal
+  - Door
+  - DeadLine
+  - Helper
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 535176119
+    locked: 0
+  - name: Environment_bottom
+    uniqueID: 1527923531
+    locked: 0
+  - name: Map_door
+    uniqueID: 1286306969
+    locked: 0
+  - name: Map_bottom
+    uniqueID: 2227300193
+    locked: 0
+  - name: Map_ladder
+    uniqueID: 3697210653
+    locked: 0
+  - name: Player
+    uniqueID: 2496550961
+    locked: 0
+  - name: Map_top
+    uniqueID: 1943419359
+    locked: 0
+  - name: Environment_top
+    uniqueID: 2414444289
+    locked: 0
