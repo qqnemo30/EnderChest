@@ -1,0 +1,4 @@
+﻿  WordCount.c
+D:\复旦大学\课程资料\基础课程与专业课程\计算机体系结构\PJ\PJ1\WordCount\WordCount\WordCount.c(12,6): warning C4013: “gets”未定义；假设外部返回 int
+D:\复旦大学\课程资料\基础课程与专业课程\计算机体系结构\PJ\PJ1\WordCount\WordCount\WordCount.c(22,17): warning C4013: “word_length”未定义；假设外部返回 int
+  WordCount.vcxproj -> D:\复旦大学\课程资料\基础课程与专业课程\计算机体系结构\PJ\PJ1\WordCount\Debug\WordCount.exe

@@ -1,0 +1,10 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/CSAPP_Vivado/task_5_pro/task_5_pro.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sim_1/new/vtf_processor.v,1654795299,verilog,,,,vtf_processor,,,,,,,,
+D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/alu.v,1654264612,verilog,,D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/processor.v,,alu,,,,,,,,
+D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/processor.v,1654852916,verilog,,D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/ram.v,,processor,,,,,,,,
+D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/ram.v,1654090453,verilog,,D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/regfile.v,,ram,,,,,,,,
+D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sources_1/new/regfile.v,1654247851,verilog,,D:/CSAPP_Vivado/task_5_pro/task_5_pro.srcs/sim_1/new/vtf_processor.v,,regfile,,,,,,,,

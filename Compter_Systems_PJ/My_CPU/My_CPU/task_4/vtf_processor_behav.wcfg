@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="vtf_processor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vtf_processor" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="385794500fs"></ZoomStartTime>
+      <ZoomEndTime time="560194501fs"></ZoomEndTime>
+      <Cursor1Time time="610000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="130"></NameColumnWidth>
+      <ValueColumnWidth column_width="59"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/vtf_processor/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/working" type="logic">
+      <obj_property name="ElementShortName">working</obj_property>
+      <obj_property name="ObjectShortName">working</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/addr" type="array">
+      <obj_property name="ElementShortName">addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/rdata" type="array">
+      <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/rA" type="array">
+      <obj_property name="ElementShortName">rA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/rB" type="array">
+      <obj_property name="ElementShortName">rB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rB[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/dstM" type="array">
+      <obj_property name="ElementShortName">dstM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dstM[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/valM" type="array">
+      <obj_property name="ElementShortName">valM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u3/aluA" type="array">
+      <obj_property name="ElementShortName">aluA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u3/aluB" type="array">
+      <obj_property name="ElementShortName">aluB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u3/alufun" type="array">
+      <obj_property name="ElementShortName">alufun[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alufun[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/valE" type="array">
+      <obj_property name="ElementShortName">valE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/dstE" type="array">
+      <obj_property name="ElementShortName">dstE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dstE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r0" type="array">
+      <obj_property name="ElementShortName">r0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r1" type="array">
+      <obj_property name="ElementShortName">r1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r2" type="array">
+      <obj_property name="ElementShortName">r2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r3" type="array">
+      <obj_property name="ElementShortName">r3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r4" type="array">
+      <obj_property name="ElementShortName">r4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r5" type="array">
+      <obj_property name="ElementShortName">r5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r5[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r6" type="array">
+      <obj_property name="ElementShortName">r6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r6[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vtf_processor/uut1/u2/r7" type="array">
+      <obj_property name="ElementShortName">r7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r7[31:0]</obj_property>
+   </wvobject>
+</wave_config>

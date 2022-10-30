@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Jun  9 22:32:01 2022
+# Process ID: 13852
+# Current directory: D:/CSAPP_Vivado/task_3/task_3.runs/impl_1
+# Command line: vivado.exe -log processor.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source processor.tcl -notrace
+# Log file: D:/CSAPP_Vivado/task_3/task_3.runs/impl_1/processor.vdi
+# Journal file: D:/CSAPP_Vivado/task_3/task_3.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source processor.tcl -notrace

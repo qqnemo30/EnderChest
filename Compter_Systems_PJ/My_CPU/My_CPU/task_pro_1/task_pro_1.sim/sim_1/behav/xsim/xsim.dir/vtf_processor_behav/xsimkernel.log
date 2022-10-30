@@ -1,0 +1,7 @@
+Running: xsim.dir/vtf_processor_behav/xsimk.exe -simmode gui -wdb vtf_processor_behav.wdb -simrunnum 0 -socket 53117
+Design successfully loaded
+Design Loading Memory Usage: 7280 KB (Peak: 7280 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 7940 KB (Peak: 7940 KB)
+Simulation CPU Usage: 62 ms

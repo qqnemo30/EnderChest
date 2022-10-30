@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="processor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="processor" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5231fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="130"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/processor/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/addr" type="array">
+      <obj_property name="ElementShortName">addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/working" type="logic">
+      <obj_property name="ElementShortName">working</obj_property>
+      <obj_property name="ObjectShortName">working</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/valA" type="array">
+      <obj_property name="ElementShortName">valA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/valB" type="array">
+      <obj_property name="ElementShortName">valB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/rdata" type="array">
+      <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/dstE" type="array">
+      <obj_property name="ElementShortName">dstE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dstE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/valE" type="array">
+      <obj_property name="ElementShortName">valE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/dstM" type="array">
+      <obj_property name="ElementShortName">dstM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dstM[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/valM" type="array">
+      <obj_property name="ElementShortName">valM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/rA" type="array">
+      <obj_property name="ElementShortName">rA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/rB" type="array">
+      <obj_property name="ElementShortName">rB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rB[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor/valC" type="array">
+      <obj_property name="ElementShortName">valC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">valC[15:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,82 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Fri Jun 10 00:19:02 2022
+| Host         : DESKTOP-D51VO9U running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file processor_control_sets_placed.rpt
+| Design       : processor
+| Device       : xc7vx485t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             193 |           77 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               4 |            1 |
+| Yes          | No                    | No                     |              95 |           48 |
+| Yes          | No                    | Yes                    |             256 |          125 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+---------------------------------+-------------------------+------------------+----------------+
+|          Clock Signal          |          Enable Signal          |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++--------------------------------+---------------------------------+-------------------------+------------------+----------------+
+|  clock_IBUF_BUFG               |                                 | reg_rA_delay[3]_i_1_n_2 |                1 |              4 |
+|  clock_IBUF_BUFG               | u1/reg_alufun_delay_reg[0]_0[0] |                         |                1 |              4 |
+|  u1/reg_alufun_delay_reg[0][0] |                                 |                         |                1 |              4 |
+|  clock_IBUF_BUFG               | u1/reg_dstM_reg[1]_rep__0       |                         |                5 |             11 |
+|  clock_IBUF_BUFG               | u1/reg_valM_reg[0][0]           |                         |                4 |             16 |
+|  u1/E[0]                       |                                 |                         |                4 |             16 |
+|  clock_IBUF_BUFG               | u1/valueB_reg[31][0]            |                         |               19 |             32 |
+|  clock_IBUF_BUFG               | u1/valueA_reg[31][0]            |                         |               19 |             32 |
+|  clock_IBUF_BUFG               | u2/reg0[31]_i_1_n_2             | wr_IBUF                 |               15 |             32 |
+|  clock_IBUF_BUFG               | u2/reg1[31]_i_1_n_2             | wr_IBUF                 |               15 |             32 |
+|  clock_IBUF_BUFG               | u2/reg2[31]_i_1_n_2             | wr_IBUF                 |               18 |             32 |
+|  clock_IBUF_BUFG               | u2/reg3[31]_i_1_n_2             | wr_IBUF                 |               11 |             32 |
+|  clock_IBUF_BUFG               | u2/reg4[31]_i_1_n_2             | wr_IBUF                 |               13 |             32 |
+|  clock_IBUF_BUFG               | u2/reg6[31]_i_1_n_2             | wr_IBUF                 |               20 |             32 |
+|  clock_IBUF_BUFG               | u2/reg5[31]_i_1_n_2             | wr_IBUF                 |               15 |             32 |
+|  clock_IBUF_BUFG               | u2/reg7[31]_i_1_n_2             | wr_IBUF                 |               18 |             32 |
+|  n_1_640_BUFG                  |                                 |                         |                9 |             32 |
+| ~rID_delay_BUFG[3]             |                                 |                         |               32 |             32 |
+|  clock_IBUF_BUFG               |                                 |                         |               13 |             49 |
+|  n_0_633_BUFG                  |                                 |                         |               19 |             64 |
++--------------------------------+---------------------------------+-------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 4      |                     3 |
+| 11     |                     1 |
+| 16+    |                    16 |
++--------+-----------------------+
+
+
