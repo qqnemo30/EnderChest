@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\qqnemo30\Desktop\FPGA\Blocks\Seven_segment_digital_tube_ignite\simulation\qsim
+vSeven_segment_digital_tube_ignite
+Z1 IhDiMhbY4Nm>K[;VB==1zL2
+Z2 V2Mi;N_JMAmo]oWHWEa9NE0
+Z3 dC:\Users\qqnemo30\Desktop\FPGA_Washing_Machine_PRO_MAX\Blocks_PRO_MAX\Seven_segment_digital_tube_ignite\simulation\qsim
+Z4 w1641921123
+Z5 8Seven_segment_digital_tube_ignite.vo
+Z6 FSeven_segment_digital_tube_ignite.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Seven_segment_digital_tube_ignite.vo|
+Z9 o-work work -O0
+Z10 n@seven_segment_digital_tube_ignite
+!i10b 1
+Z11 !s100 fkhQjb>g>PZliCm`L^]Q`2
+!s85 0
+Z12 !s108 1641921124.703000
+Z13 !s107 Seven_segment_digital_tube_ignite.vo|
+!s101 -O0
+vSeven_segment_digital_tube_ignite_vlg_check_tst
+!i10b 1
+!s100 RB7PjbhVO^2jV^OVkn1DB3
+IChg[O18J=8mU<EkhV`B;c3
+Z14 V`73F5SFVQKChnMNKaDknM1
+R3
+Z15 w1641921122
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 81
+R7
+r1
+!s85 0
+31
+Z18 !s108 1641921124.791000
+Z19 !s107 Waveform.vwf.vt|
+Z20 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z21 n@seven_segment_digital_tube_ignite_vlg_check_tst
+vSeven_segment_digital_tube_ignite_vlg_sample_tst
+!i10b 1
+!s100 gBhkg39R@QQY]9NUe4oOZ3
+I`>1YRSa>ngPOL=<zd[?G=3
+V0gNHT>;HJIj]gbY7RmP:X0
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z22 n@seven_segment_digital_tube_ignite_vlg_sample_tst
+vSeven_segment_digital_tube_ignite_vlg_vec_tst
+!i10b 1
+!s100 `lh:`6KAEzSXg6km58:5J3
+I?jRV]e8c_=6[3=m:?>j]_2
+Z23 V32Q:>lF_1GfzG;EjYW6T_0
+R3
+R15
+R16
+R17
+L0 338
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z24 n@seven_segment_digital_tube_ignite_vlg_vec_tst

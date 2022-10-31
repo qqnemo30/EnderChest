@@ -1,0 +1,7 @@
+
+State Machine - |Washing_Machine|Seven_segment_digital_tube_choose:inst1|state
+Name state.one_tenth_sec state.sec state.ten_sec state.min 
+state.min 0 0 0 0 
+state.ten_sec 0 0 1 1 
+state.sec 0 1 0 1 
+state.one_tenth_sec 1 0 0 1 

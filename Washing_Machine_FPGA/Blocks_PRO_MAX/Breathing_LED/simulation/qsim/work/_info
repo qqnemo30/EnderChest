@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\qqnemo30\Desktop\TEST\Blocks_test\Breathing_LED\simulation\qsim
+vBreathing_LED
+Z1 !s100 nL;KCmbn^dkhzS[=IU>FJ2
+Z2 I:M7?@7ONT[bCOf0IE@C^S0
+Z3 VSSW`U?];F:XJ5S]OzE<b`3
+Z4 dC:\Users\qqnemo30\Desktop\FPGA_Washing_Machine_PRO_MAX\Blocks_PRO_MAX\Breathing_LED\simulation\qsim
+Z5 w1642006833
+Z6 8Breathing_LED.vo
+Z7 FBreathing_LED.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Breathing_LED.vo|
+Z10 o-work work -O0
+Z11 n@breathing_@l@e@d
+!i10b 1
+!s85 0
+Z12 !s108 1642006834.695000
+Z13 !s107 Breathing_LED.vo|
+!s101 -O0
+vBreathing_LED_vlg_check_tst
+!i10b 1
+!s100 06WGGfKMz3VDzIO8Lbc`>1
+Id_V_]<OFLUURKf6LVBlTP1
+Z14 Vz8eFIO_DS=4O8V^8LMMQ=2
+R4
+Z15 w1642006832
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z18 !s108 1642006834.789000
+Z19 !s107 Waveform.vwf.vt|
+Z20 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z21 n@breathing_@l@e@d_vlg_check_tst
+vBreathing_LED_vlg_sample_tst
+!i10b 1
+Z22 !s100 LofTD_La_RlX[kbiA_zhc2
+Z23 IgN[<n=>n[MXA91`^b4gAV1
+Z24 VB0mI=2N@abd^FnM^<?e1M3
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z25 n@breathing_@l@e@d_vlg_sample_tst
+vBreathing_LED_vlg_vec_tst
+!i10b 1
+!s100 BZ5]anjYA9Ul>K=^_VKLi2
+IW0@ZoLknZTQF=Y@d3;TlP3
+Z26 V5SCaIJ8??SO^98cA4R8XF3
+R4
+R15
+R16
+R17
+Z27 L0 159
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z28 n@breathing_@l@e@d_vlg_vec_tst

@@ -1,0 +1,179 @@
+
+
+// 七段数码管控制描述
+
+module Seven_segment_digital_tube_control(clk, rst, clr, one_tenth_second_cnt,
+														a, b, c, d, e, f, g,
+														low_min, low_ten_sec, low_sec, low_one_tenth_sec);
+	
+	input clk, rst, clr, one_tenth_second_cnt;
+	input low_min, low_ten_sec, low_sec, low_one_tenth_sec;	
+	
+	output reg a, b, c, d, e, f, g;
+	
+	reg [1:0] state;
+	localparam min = 2'b00;
+	localparam ten_sec = 2'b01;
+	localparam sec = 2'b10;
+	localparam one_tenth_sec = 2'b11;
+
+	
+	always @(posedge clk or negedge rst)	// 0.001s分频; 24MHz = 375 * 2^6 *1000
+		begin
+			if (!rst)
+				begin
+					clk_cnt <= 0;
+					clk_div <= 0;
+				end
+			else if (clk_cnt == 3)		//374
+				begin
+					clk_cnt <= 0;
+					clk_div <= 1;
+				end
+			else
+				begin
+					clk_cnt <= clk_cnt + 1;
+					clk_div <= 0;
+				end
+		end
+	
+	
+	always @(posedge clk_div or negedge rst)		//选通
+		begin 
+			if (!rst)
+				begin
+					state <= min;
+					low_min <= 1;
+					low_ten_sec <= 1;
+					low_sec <= 1;
+					low_one_tenth_sec <= 1;
+					a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1;
+				end
+			else
+				begin
+					case(state)
+						min:
+							begin 
+								state <= ten_sec;
+								low_min <= 0;
+								low_ten_sec <= 1;
+								low_sec <= 1;
+								low_one_tenth_sec <= 1;
+								if (posminute_cnt == 0)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//0
+								else if (posminute_cnt == 1)
+									begin	a <= 1; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//1
+								else if (posminute_cnt == 2)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 1; f <= 1; g <= 0; end	//2
+								else if (posminute_cnt == 3)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 1; g <= 0; end	//3
+								else if (posminute_cnt == 4)
+									begin	a <= 1; b <= 0; c <= 1; d <= 1; e <= 0; f <= 0; g <= 0; end	//4
+								else if (posminute_cnt == 5)
+									begin	a <= 0; b <= 1; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//5
+								else if (posminute_cnt == 6)
+									begin	a <= 0; b <= 1; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//6
+								else if (posminute_cnt == 7)
+									begin	a <= 0; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//7
+								else if (posminute_cnt == 8)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//8
+								else if (posminute_cnt == 9)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//9
+								else if (posminute_cnt == 10)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//10
+							end
+						ten_sec:
+							begin 
+								state <= sec;
+								low_min <= 1;
+								low_ten_sec <= 0;
+								low_sec <= 1;
+								low_one_tenth_sec <= 1;
+								if (posten_second_cnt == 0)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//0
+								else if (posten_second_cnt == 1)
+									begin	a <= 1; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//1
+								else if (posten_second_cnt == 2)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 1; f <= 1; g <= 0; end	//2
+								else if (posten_second_cnt == 3)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 1; g <= 0; end	//3
+								else if (posten_second_cnt == 4)
+									begin	a <= 1; b <= 0; c <= 1; d <= 1; e <= 0; f <= 0; g <= 0; end	//4
+								else if (posten_second_cnt == 5)
+									begin	a <= 0; b <= 1; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//5
+								else if (posten_second_cnt == 6)
+									begin	a <= 0; b <= 1; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//6
+								else if (posten_second_cnt == 7)
+									begin	a <= 0; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//7
+								else if (posten_second_cnt == 8)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//8
+								else if (posten_second_cnt == 9)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//9
+								else if (posten_second_cnt == 10)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//10
+							end
+						sec:
+							begin 
+								state <= one_tenth_sec;
+								low_min <= 1;
+								low_ten_sec <= 1;
+								low_sec <= 0;
+								low_one_tenth_sec <= 1;
+								if (posten_second_cnt == 0)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//0
+								else if (posten_second_cnt == 1)
+									begin	a <= 1; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//1
+								else if (posten_second_cnt == 2)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 1; f <= 1; g <= 0; end	//2
+								else if (posten_second_cnt == 3)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 1; g <= 0; end	//3
+								else if (posten_second_cnt == 4)
+									begin	a <= 1; b <= 0; c <= 1; d <= 1; e <= 0; f <= 0; g <= 0; end	//4
+								else if (posten_second_cnt == 5)
+									begin	a <= 0; b <= 1; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//5
+								else if (posten_second_cnt == 6)
+									begin	a <= 0; b <= 1; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//6
+								else if (posten_second_cnt == 7)
+									begin	a <= 0; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//7
+								else if (posten_second_cnt == 8)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//8
+								else if (posten_second_cnt == 9)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//9
+								else if (posten_second_cnt == 10)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//10
+							end
+						one_tenth_sec:
+							begin 
+								state <= min;
+								low_min <= 1;
+								low_ten_sec <= 1;
+								low_sec <= 1;
+								low_one_tenth_sec <= 0;
+								if (poso_t_s_cnt == 0)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//0
+								else if (poso_t_s_cnt == 1)
+									begin	a <= 1; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//1
+								else if (poso_t_s_cnt == 2)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 1; f <= 1; g <= 0; end	//2
+								else if (poso_t_s_cnt == 3)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 1; g <= 0; end	//3
+								else if (poso_t_s_cnt == 4)
+									begin	a <= 1; b <= 0; c <= 1; d <= 1; e <= 0; f <= 0; g <= 0; end	//4
+								else if (poso_t_s_cnt == 5)
+									begin	a <= 0; b <= 1; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//5
+								else if (poso_t_s_cnt == 6)
+									begin	a <= 0; b <= 1; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//6
+								else if (poso_t_s_cnt == 7)
+									begin	a <= 0; b <= 0; c <= 0; d <= 1; e <= 1; f <= 1; g <= 1; end	//7
+								else if (poso_t_s_cnt == 8)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 0; end	//8
+								else if (poso_t_s_cnt == 9)
+									begin	a <= 0; b <= 0; c <= 1; d <= 0; e <= 0; f <= 0; g <= 0; end	//9
+								else if (poso_t_s_cnt == 10)
+									begin	a <= 0; b <= 0; c <= 0; d <= 0; e <= 0; f <= 0; g <= 1; end	//10
+							end
+					endcase
+				end
+		end
+
+endmodule

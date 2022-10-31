@@ -1,0 +1,326 @@
+$comment
+	File created using the following command:
+		vcd file Seven_segment_digital_tube_ignite.msim.vcd -direction
+$end
+$date
+	Wed Jan 12 01:12:05 2022
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Seven_segment_digital_tube_ignite_vlg_vec_tst $end
+$var reg 1 ! Led_free $end
+$var reg 1 " Led_water_supply $end
+$var reg 1 # clk $end
+$var reg 1 $ clr $end
+$var reg 4 % cnt_min [3:0] $end
+$var reg 4 & cnt_one_tenth_sec [3:0] $end
+$var reg 4 ' cnt_sec [3:0] $end
+$var reg 4 ( cnt_ten_sec [3:0] $end
+$var reg 1 ) low_min $end
+$var reg 1 * low_one_tenth_sec $end
+$var reg 1 + low_sec $end
+$var reg 1 , low_ten_sec $end
+$var reg 1 - rst $end
+$var wire 1 . a $end
+$var wire 1 / b $end
+$var wire 1 0 c $end
+$var wire 1 1 d $end
+$var wire 1 2 e $end
+$var wire 1 3 f $end
+$var wire 1 4 g $end
+$var wire 1 5 sampler $end
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < a~output_o $end
+$var wire 1 = b~output_o $end
+$var wire 1 > c~output_o $end
+$var wire 1 ? d~output_o $end
+$var wire 1 @ e~output_o $end
+$var wire 1 A f~output_o $end
+$var wire 1 B g~output_o $end
+$var wire 1 C clk~input_o $end
+$var wire 1 D clk~inputclkctrl_outclk $end
+$var wire 1 E low_ten_sec~input_o $end
+$var wire 1 F cnt_min[3]~input_o $end
+$var wire 1 G low_sec~input_o $end
+$var wire 1 H low_one_tenth_sec~input_o $end
+$var wire 1 I a~9_combout $end
+$var wire 1 J a~12_combout $end
+$var wire 1 K cnt_sec[0]~input_o $end
+$var wire 1 L cnt_sec[3]~input_o $end
+$var wire 1 M a~10_combout $end
+$var wire 1 N cnt_one_tenth_sec[2]~input_o $end
+$var wire 1 O cnt_one_tenth_sec[1]~input_o $end
+$var wire 1 P a~16_combout $end
+$var wire 1 Q cnt_ten_sec[0]~input_o $end
+$var wire 1 R cnt_ten_sec[3]~input_o $end
+$var wire 1 S a~14_combout $end
+$var wire 1 T cnt_one_tenth_sec[0]~input_o $end
+$var wire 1 U cnt_one_tenth_sec[3]~input_o $end
+$var wire 1 V a~13_combout $end
+$var wire 1 W cnt_ten_sec[2]~input_o $end
+$var wire 1 X cnt_ten_sec[1]~input_o $end
+$var wire 1 Y a~15_combout $end
+$var wire 1 Z a~17_combout $end
+$var wire 1 [ cnt_sec[2]~input_o $end
+$var wire 1 \ cnt_sec[1]~input_o $end
+$var wire 1 ] a~11_combout $end
+$var wire 1 ^ c~0_combout $end
+$var wire 1 _ Led_water_supply~input_o $end
+$var wire 1 ` Led_free~input_o $end
+$var wire 1 a a~57_combout $end
+$var wire 1 b a~28_combout $end
+$var wire 1 c a~29_combout $end
+$var wire 1 d a~30_combout $end
+$var wire 1 e a~19_combout $end
+$var wire 1 f a~20_combout $end
+$var wire 1 g a~21_combout $end
+$var wire 1 h a~22_combout $end
+$var wire 1 i a~23_combout $end
+$var wire 1 j a~24_combout $end
+$var wire 1 k a~25_combout $end
+$var wire 1 l a~26_combout $end
+$var wire 1 m a~27_combout $end
+$var wire 1 n f~0_combout $end
+$var wire 1 o a~31_combout $end
+$var wire 1 p a~58_combout $end
+$var wire 1 q a~32_combout $end
+$var wire 1 r cnt_min[0]~input_o $end
+$var wire 1 s cnt_min[1]~input_o $end
+$var wire 1 t cnt_min[2]~input_o $end
+$var wire 1 u a~18_combout $end
+$var wire 1 v a~33_combout $end
+$var wire 1 w rst~input_o $end
+$var wire 1 x clr~input_o $end
+$var wire 1 y a~34_combout $end
+$var wire 1 z a~34clkctrl_outclk $end
+$var wire 1 { a~41_combout $end
+$var wire 1 | a~42_combout $end
+$var wire 1 } a~43_combout $end
+$var wire 1 ~ a~38_combout $end
+$var wire 1 !! a~39_combout $end
+$var wire 1 "! a~40_combout $end
+$var wire 1 #! a~44_combout $end
+$var wire 1 $! low_min~input_o $end
+$var wire 1 %! a~35_combout $end
+$var wire 1 &! a~59_combout $end
+$var wire 1 '! a~36_combout $end
+$var wire 1 (! a~60_combout $end
+$var wire 1 )! a~37_combout $end
+$var wire 1 *! a~45_combout $end
+$var wire 1 +! a~46_combout $end
+$var wire 1 ,! a~48_combout $end
+$var wire 1 -! a~47_combout $end
+$var wire 1 .! a~50_combout $end
+$var wire 1 /! a~51_combout $end
+$var wire 1 0! a~49_combout $end
+$var wire 1 1! a~52_combout $end
+$var wire 1 2! a~53_combout $end
+$var wire 1 3! a~54_combout $end
+$var wire 1 4! a~55_combout $end
+$var wire 1 5! a~56_combout $end
+$var wire 1 6! a~reg0_q $end
+$var wire 1 7! a~8_combout $end
+$var wire 1 8! b~0_combout $end
+$var wire 1 9! b~1_combout $end
+$var wire 1 :! b~reg0_q $end
+$var wire 1 ;! c~2_combout $end
+$var wire 1 <! c~1_combout $end
+$var wire 1 =! c~3_combout $end
+$var wire 1 >! c~reg0_q $end
+$var wire 1 ?! d~5_combout $end
+$var wire 1 @! d~4_combout $end
+$var wire 1 A! d~7_combout $end
+$var wire 1 B! d~6_combout $end
+$var wire 1 C! d~reg0_q $end
+$var wire 1 D! e~0_combout $end
+$var wire 1 E! e~1_combout $end
+$var wire 1 F! e~2_combout $end
+$var wire 1 G! e~3_combout $end
+$var wire 1 H! e~4_combout $end
+$var wire 1 I! e~5_combout $end
+$var wire 1 J! e~reg0_q $end
+$var wire 1 K! f~2_combout $end
+$var wire 1 L! f~1_combout $end
+$var wire 1 M! f~3_combout $end
+$var wire 1 N! f~reg0_q $end
+$var wire 1 O! g~0_combout $end
+$var wire 1 P! g~1_combout $end
+$var wire 1 Q! g~2_combout $end
+$var wire 1 R! g~3_combout $end
+$var wire 1 S! g~4_combout $end
+$var wire 1 T! g~5_combout $end
+$var wire 1 U! g~6_combout $end
+$var wire 1 V! g~7_combout $end
+$var wire 1 W! g~8_combout $end
+$var wire 1 X! g~9_combout $end
+$var wire 1 Y! g~10_combout $end
+$var wire 1 Z! g~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+b0 %
+b0 &
+b0 '
+b0 (
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+14
+x5
+06
+17
+x8
+19
+1:
+1;
+0<
+0=
+0>
+0?
+0@
+0A
+1B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+1P
+0Q
+0R
+0S
+0T
+0U
+1V
+0W
+0X
+1Y
+1Z
+0[
+0\
+1]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+1n
+0o
+0p
+1q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+1y
+1z
+0{
+0|
+0}
+0~
+0!!
+0"!
+1#!
+0$!
+0%!
+0&!
+1'!
+1(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+10!
+01!
+02!
+03!
+04!
+15!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+1F!
+0G!
+1H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+1O!
+1P!
+0Q!
+0R!
+1S!
+1T!
+1U!
+1V!
+1W!
+0X!
+0Y!
+0Z!
+$end
+#1000000

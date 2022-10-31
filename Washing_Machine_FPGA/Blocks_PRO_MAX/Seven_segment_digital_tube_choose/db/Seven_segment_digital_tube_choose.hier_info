@@ -1,0 +1,44 @@
+|Seven_segment_digital_tube_choose
+clk => clk_div.CLK
+clk => clk_cnt[0].CLK
+clk => clk_cnt[1].CLK
+clk => clk_cnt[2].CLK
+clk => clk_cnt[3].CLK
+clk => clk_cnt[4].CLK
+clk => clk_cnt[5].CLK
+clk => clk_cnt[6].CLK
+clk => clk_cnt[7].CLK
+clk => clk_cnt[8].CLK
+clk => clk_cnt[9].CLK
+clk => clk_cnt[10].CLK
+clk => clk_cnt[11].CLK
+clk => clk_cnt[12].CLK
+clk => clk_cnt[13].CLK
+clk => clk_cnt[14].CLK
+rst => clk_div.ACLR
+rst => clk_cnt[0].ACLR
+rst => clk_cnt[1].ACLR
+rst => clk_cnt[2].ACLR
+rst => clk_cnt[3].ACLR
+rst => clk_cnt[4].ACLR
+rst => clk_cnt[5].ACLR
+rst => clk_cnt[6].ACLR
+rst => clk_cnt[7].ACLR
+rst => clk_cnt[8].ACLR
+rst => clk_cnt[9].ACLR
+rst => clk_cnt[10].ACLR
+rst => clk_cnt[11].ACLR
+rst => clk_cnt[12].ACLR
+rst => clk_cnt[13].ACLR
+rst => clk_cnt[14].ACLR
+rst => low_one_tenth_sec~reg0.PRESET
+rst => low_sec~reg0.PRESET
+rst => low_ten_sec~reg0.PRESET
+rst => low_min~reg0.PRESET
+rst => state~3.DATAIN
+low_min <= low_min~reg0.DB_MAX_OUTPUT_PORT_TYPE
+low_ten_sec <= low_ten_sec~reg0.DB_MAX_OUTPUT_PORT_TYPE
+low_sec <= low_sec~reg0.DB_MAX_OUTPUT_PORT_TYPE
+low_one_tenth_sec <= low_one_tenth_sec~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,173 @@
+
+
+//分频定时计数描述
+
+module Timer(clk, rst, clr,
+				 poso_t_s_cnt, possecond_cnt, posten_second_cnt, posminute_cnt,
+				 Rinsing_timer, Draining_timer, Dehydrating_timer, Warning_timer);
+	input clk, rst, clr;
+	reg one_tenth_second, second, ten_second, minute;
+	output reg Rinsing_timer, Draining_timer, Dehydrating_timer, Warning_timer;
+	reg [13:0] posclk_cnt;
+	output reg [3:0] poso_t_s_cnt;
+	output reg [3:0] possecond_cnt;
+	output reg [2:0] posten_second_cnt;
+	output reg [3:0] posminute_cnt;
+	
+	
+	always @(posedge clk or negedge rst or negedge clr)	// 0.1s分频; 24MHz = 9375 * 2^8 *10
+		begin
+			if (!rst)
+				begin
+					posclk_cnt <= 0;
+					one_tenth_second <= 0;
+				end
+			else if (!clr)
+				begin
+					posclk_cnt <= 0;
+					one_tenth_second <= 0;
+				end
+			else if (posclk_cnt == 2)		//9374
+				begin
+					posclk_cnt <= 0;
+					one_tenth_second <= 1;
+				end
+			else
+				begin
+					posclk_cnt <= posclk_cnt + 1;
+					one_tenth_second <= 0;
+				end
+		end			
+		
+	always @(posedge one_tenth_second or negedge rst or negedge clr)	// 1s
+		begin
+			if (!rst)
+				begin
+					poso_t_s_cnt <= 0;
+					second <= 0;
+				end
+			else if (!clr)
+				begin
+					poso_t_s_cnt <= 0;
+					second <= 0;
+				end
+			else if (poso_t_s_cnt == 9)
+				begin
+					poso_t_s_cnt <= 0;
+					second <= 1;
+				end
+			else
+				begin
+					poso_t_s_cnt <= poso_t_s_cnt + 1;
+					second <= 0;
+				end
+		end			
+	
+	always @(posedge second or negedge rst or negedge clr)	// 10s
+		begin
+			if (!rst)
+				begin
+					possecond_cnt <= 0;
+					ten_second <= 0;
+				end
+			else if (!clr)
+				begin
+					possecond_cnt <= 0;
+					ten_second <= 0;
+				end
+			else if (possecond_cnt == 9)
+				begin
+					possecond_cnt <= 0;
+					ten_second <= 1;
+				end
+			else
+				begin
+					possecond_cnt <= possecond_cnt + 1;
+					ten_second <= 0;
+				end
+		end
+	
+	always @(posedge ten_second or negedge rst or negedge clr)	// 1min
+		begin
+			if (!rst)
+				begin
+					posten_second_cnt <= 0;
+					minute <= 0;
+				end
+			else if (!clr)
+				begin
+					posten_second_cnt <= 0;
+					minute <= 0;
+				end
+			else if (posten_second_cnt == 5)
+				begin
+					posten_second_cnt <= 0;
+					minute <= 1;
+				end
+			else
+				begin
+					posten_second_cnt <= posten_second_cnt + 1;
+					minute <= 0;
+				end
+		end
+	
+	always @(posedge minute or negedge rst or negedge clr)	// 1s
+		begin
+			if (!rst)
+					posminute_cnt <= 0;
+			else if (!clr)
+					posminute_cnt <= 0;
+			else		
+					posminute_cnt <= posminute_cnt + 1;
+		end
+	
+
+	always @(posedge clk or negedge rst or negedge clr)		//计时完毕信号
+		begin
+			if (!rst)
+				begin
+					Rinsing_timer <= 0;
+					Draining_timer <= 0;
+					Dehydrating_timer <= 0;
+					Warning_timer <= 0;
+				end
+			else if (!clr)
+				begin
+					Rinsing_timer <= 0;
+					Draining_timer <= 0;
+					Dehydrating_timer <= 0;
+					Warning_timer <= 0;
+				end
+			else if (posten_second_cnt == 1)
+				begin
+					Rinsing_timer <= 0;
+					Draining_timer <= 0;
+					Dehydrating_timer <= 0;
+					Warning_timer <= 1;
+				end
+			else if (posten_second_cnt == 3)
+				begin
+					Rinsing_timer <= 0;
+					Draining_timer <= 1;
+					Dehydrating_timer <= 0;
+					Warning_timer <= 0;
+				end
+			else if (posminute_cnt == 5)		
+				begin
+					Rinsing_timer <= 0;
+					Draining_timer <= 0;
+					Dehydrating_timer <= 1;
+					Warning_timer <= 0;
+				end
+			else if (posminute_cnt == 10)
+				begin
+					Rinsing_timer <= 1;
+					Draining_timer <= 0;
+					Dehydrating_timer <= 0;
+					Warning_timer <= 0;
+				end
+		end
+		
+
+endmodule
+

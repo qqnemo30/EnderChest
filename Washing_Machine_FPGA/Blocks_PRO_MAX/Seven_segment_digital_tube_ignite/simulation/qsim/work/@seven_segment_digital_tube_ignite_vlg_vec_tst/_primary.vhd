@@ -1,0 +1,4 @@
+library verilog;
+use verilog.vl_types.all;
+entity Seven_segment_digital_tube_ignite_vlg_vec_tst is
+end Seven_segment_digital_tube_ignite_vlg_vec_tst;

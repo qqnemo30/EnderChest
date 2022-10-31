@@ -1,0 +1,218 @@
+$comment
+	File created using the following command:
+		vcd file Washing_Machine_States.msim.vcd -direction
+$end
+$date
+	Wed Jan 12 01:10:43 2022
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Washing_Machine_States_vlg_vec_tst $end
+$var reg 1 ! Dehydrating_timer $end
+$var reg 1 " Draining_timer $end
+$var reg 1 # End $end
+$var reg 1 $ Rinsing_timer $end
+$var reg 1 % Start $end
+$var reg 1 & Warning_timer $end
+$var reg 1 ' Water_level $end
+$var reg 1 ( clk $end
+$var reg 1 ) rst $end
+$var wire 1 * Led_dehydrating $end
+$var wire 1 + Led_free $end
+$var wire 1 , Led_rinsing $end
+$var wire 1 - Led_warning $end
+$var wire 1 . Led_water_draining $end
+$var wire 1 / Led_water_supply $end
+$var wire 1 0 clr $end
+$var wire 1 1 state [2] $end
+$var wire 1 2 state [1] $end
+$var wire 1 3 state [0] $end
+$var wire 1 4 sampler $end
+$scope module i1 $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var tri1 1 8 devclrn $end
+$var tri1 1 9 devpor $end
+$var tri1 1 : devoe $end
+$var wire 1 ; clr~output_o $end
+$var wire 1 < state[0]~output_o $end
+$var wire 1 = state[1]~output_o $end
+$var wire 1 > state[2]~output_o $end
+$var wire 1 ? Led_free~output_o $end
+$var wire 1 @ Led_water_supply~output_o $end
+$var wire 1 A Led_rinsing~output_o $end
+$var wire 1 B Led_water_draining~output_o $end
+$var wire 1 C Led_dehydrating~output_o $end
+$var wire 1 D Led_warning~output_o $end
+$var wire 1 E clk~input_o $end
+$var wire 1 F clk~inputclkctrl_outclk $end
+$var wire 1 G End~input_o $end
+$var wire 1 H Draining_timer~input_o $end
+$var wire 1 I Rinsing_timer~input_o $end
+$var wire 1 J Start~input_o $end
+$var wire 1 K Mux2~4_combout $end
+$var wire 1 L Water_level~input_o $end
+$var wire 1 M Mux1~1_combout $end
+$var wire 1 N Dehydrating_timer~input_o $end
+$var wire 1 O Mux1~0_combout $end
+$var wire 1 P Mux1~2_combout $end
+$var wire 1 Q rst~input_o $end
+$var wire 1 R rst~inputclkctrl_outclk $end
+$var wire 1 S state[1]~reg0_q $end
+$var wire 1 T Warning_timer~input_o $end
+$var wire 1 U Mux2~3_combout $end
+$var wire 1 V state[2]~0_combout $end
+$var wire 1 W state[2]~reg0_q $end
+$var wire 1 X Mux2~1_combout $end
+$var wire 1 Y Mux2~0_combout $end
+$var wire 1 Z Mux2~2_combout $end
+$var wire 1 [ state[0]~reg0_q $end
+$var wire 1 \ Mux6~0_combout $end
+$var wire 1 ] Mux6~1_combout $end
+$var wire 1 ^ Mux4~2_combout $end
+$var wire 1 _ Led_water_draining~reg0_q $end
+$var wire 1 ` q3~0_combout $end
+$var wire 1 a q3~q $end
+$var wire 1 b Led_rinsing~0_combout $end
+$var wire 1 c Led_rinsing~1_combout $end
+$var wire 1 d Led_rinsing~reg0_q $end
+$var wire 1 e q1~0_combout $end
+$var wire 1 f q1~q $end
+$var wire 1 g q4~q $end
+$var wire 1 h q2~feeder_combout $end
+$var wire 1 i q2~q $end
+$var wire 1 j clr~0_combout $end
+$var wire 1 k Mux8~0_combout $end
+$var wire 1 l Mux8~1_combout $end
+$var wire 1 m Led_warning~reg0_q $end
+$var wire 1 n q7~0_combout $end
+$var wire 1 o q7~q $end
+$var wire 1 p Mux7~0_combout $end
+$var wire 1 q Mux7~1_combout $end
+$var wire 1 r Mux7~2_combout $end
+$var wire 1 s Led_dehydrating~reg0_q $end
+$var wire 1 t q5~0_combout $end
+$var wire 1 u q5~q $end
+$var wire 1 v q6~feeder_combout $end
+$var wire 1 w q6~q $end
+$var wire 1 x q8~q $end
+$var wire 1 y clr~1_combout $end
+$var wire 1 z clr~2_combout $end
+$var wire 1 { Mux3~0_combout $end
+$var wire 1 | Mux3~1_combout $end
+$var wire 1 } Mux3~2_combout $end
+$var wire 1 ~ Mux3~3_combout $end
+$var wire 1 !! Led_free~reg0_q $end
+$var wire 1 "! Mux4~0_combout $end
+$var wire 1 #! Mux4~1_combout $end
+$var wire 1 $! Led_water_supply~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+1*
+0+
+1,
+1-
+1.
+1/
+10
+03
+02
+01
+x4
+05
+16
+x7
+18
+19
+1:
+1;
+0<
+0=
+0>
+0?
+1@
+1A
+1B
+1C
+1D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+1X
+0Y
+1Z
+0[
+1\
+0]
+1^
+0_
+1`
+0a
+0b
+0c
+0d
+1e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+1n
+0o
+0p
+1q
+0r
+0s
+1t
+0u
+0v
+0w
+0x
+0y
+0z
+1{
+1|
+0}
+1~
+0!!
+0"!
+1#!
+0$!
+$end
+#1000000

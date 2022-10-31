@@ -1,0 +1,9 @@
+
+State Machine - |Washing_Machine_States|state
+Name state.Dehydrating state.Warning state.Rinsing state.Water_draining state.Water_supply state.Free 
+state.Free 0 0 0 0 0 0 
+state.Water_supply 0 0 0 0 1 1 
+state.Water_draining 0 0 0 1 0 1 
+state.Rinsing 0 0 1 0 0 1 
+state.Warning 0 1 0 0 0 1 
+state.Dehydrating 1 0 0 0 0 1 

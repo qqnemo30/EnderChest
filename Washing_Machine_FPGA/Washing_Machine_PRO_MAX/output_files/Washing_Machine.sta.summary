@@ -1,0 +1,461 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'LED_dot_matrix:inst2|clk_9375'
+Slack : -7.755
+TNS   : -132.051
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK'
+Slack : -4.237
+TNS   : -215.132
+
+Type  : Slow 1200mV 85C Model Setup 'Timer:inst3|minute'
+Slack : -1.812
+TNS   : -7.004
+
+Type  : Slow 1200mV 85C Model Setup 'Timer:inst3|q0'
+Slack : -1.538
+TNS   : -18.513
+
+Type  : Slow 1200mV 85C Model Setup 'Timer:inst3|clk_9375'
+Slack : -1.343
+TNS   : -8.335
+
+Type  : Slow 1200mV 85C Model Setup 'Timer:inst3|ten_second'
+Slack : -0.750
+TNS   : -2.360
+
+Type  : Slow 1200mV 85C Model Setup 'Timer:inst3|second'
+Slack : -0.515
+TNS   : -1.746
+
+Type  : Slow 1200mV 85C Model Setup 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : -0.238
+TNS   : -0.810
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LED_dot_matrix:inst2|clk_9375'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Timer:inst3|q0'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Timer:inst3|minute'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Timer:inst3|second'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Timer:inst3|ten_second'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Timer:inst3|clk_9375'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK'
+Slack : -3.969
+TNS   : -241.660
+
+Type  : Slow 1200mV 85C Model Recovery 'Timer:inst3|clk_9375'
+Slack : -3.858
+TNS   : -34.722
+
+Type  : Slow 1200mV 85C Model Recovery 'LED_dot_matrix:inst2|clk_9375'
+Slack : -3.757
+TNS   : -110.436
+
+Type  : Slow 1200mV 85C Model Recovery 'Timer:inst3|minute'
+Slack : -3.322
+TNS   : -13.288
+
+Type  : Slow 1200mV 85C Model Recovery 'Timer:inst3|second'
+Slack : -2.970
+TNS   : -17.819
+
+Type  : Slow 1200mV 85C Model Recovery 'Timer:inst3|ten_second'
+Slack : -2.970
+TNS   : -14.850
+
+Type  : Slow 1200mV 85C Model Recovery 'Timer:inst3|q0'
+Slack : -2.345
+TNS   : -36.981
+
+Type  : Slow 1200mV 85C Model Removal 'Timer:inst3|q0'
+Slack : 1.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Timer:inst3|second'
+Slack : 2.569
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Timer:inst3|ten_second'
+Slack : 2.571
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'LED_dot_matrix:inst2|clk_9375'
+Slack : 2.870
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Timer:inst3|minute'
+Slack : 2.936
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK'
+Slack : 3.097
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Timer:inst3|clk_9375'
+Slack : 3.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -157.648
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LED_dot_matrix:inst2|clk_9375'
+Slack : -1.487
+TNS   : -47.584
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timer:inst3|q0'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timer:inst3|clk_9375'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timer:inst3|second'
+Slack : -1.487
+TNS   : -8.922
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timer:inst3|ten_second'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timer:inst3|minute'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Setup 'LED_dot_matrix:inst2|clk_9375'
+Slack : -7.165
+TNS   : -121.413
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK'
+Slack : -3.894
+TNS   : -191.632
+
+Type  : Slow 1200mV 0C Model Setup 'Timer:inst3|minute'
+Slack : -1.659
+TNS   : -6.334
+
+Type  : Slow 1200mV 0C Model Setup 'Timer:inst3|q0'
+Slack : -1.303
+TNS   : -15.635
+
+Type  : Slow 1200mV 0C Model Setup 'Timer:inst3|clk_9375'
+Slack : -1.116
+TNS   : -6.744
+
+Type  : Slow 1200mV 0C Model Setup 'Timer:inst3|ten_second'
+Slack : -0.581
+TNS   : -1.851
+
+Type  : Slow 1200mV 0C Model Setup 'Timer:inst3|second'
+Slack : -0.404
+TNS   : -1.290
+
+Type  : Slow 1200mV 0C Model Setup 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : -0.129
+TNS   : -0.391
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LED_dot_matrix:inst2|clk_9375'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Timer:inst3|minute'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Timer:inst3|q0'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Timer:inst3|second'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Timer:inst3|ten_second'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Timer:inst3|clk_9375'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK'
+Slack : -3.539
+TNS   : -213.061
+
+Type  : Slow 1200mV 0C Model Recovery 'Timer:inst3|clk_9375'
+Slack : -3.444
+TNS   : -30.996
+
+Type  : Slow 1200mV 0C Model Recovery 'LED_dot_matrix:inst2|clk_9375'
+Slack : -3.354
+TNS   : -98.010
+
+Type  : Slow 1200mV 0C Model Recovery 'Timer:inst3|minute'
+Slack : -2.931
+TNS   : -11.724
+
+Type  : Slow 1200mV 0C Model Recovery 'Timer:inst3|ten_second'
+Slack : -2.569
+TNS   : -12.845
+
+Type  : Slow 1200mV 0C Model Recovery 'Timer:inst3|second'
+Slack : -2.560
+TNS   : -15.360
+
+Type  : Slow 1200mV 0C Model Recovery 'Timer:inst3|q0'
+Slack : -1.983
+TNS   : -30.981
+
+Type  : Slow 1200mV 0C Model Removal 'Timer:inst3|q0'
+Slack : 1.070
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Timer:inst3|second'
+Slack : 2.223
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Timer:inst3|ten_second'
+Slack : 2.232
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'LED_dot_matrix:inst2|clk_9375'
+Slack : 2.557
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Timer:inst3|minute'
+Slack : 2.608
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK'
+Slack : 2.750
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Timer:inst3|clk_9375'
+Slack : 3.051
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -157.648
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LED_dot_matrix:inst2|clk_9375'
+Slack : -1.487
+TNS   : -47.584
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|q0'
+Slack : -1.487
+TNS   : -26.257
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|clk_9375'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|second'
+Slack : -1.487
+TNS   : -9.078
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|ten_second'
+Slack : -1.487
+TNS   : -7.525
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|minute'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Fast 1200mV 0C Model Setup 'LED_dot_matrix:inst2|clk_9375'
+Slack : -2.667
+TNS   : -40.755
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK'
+Slack : -1.183
+TNS   : -38.677
+
+Type  : Fast 1200mV 0C Model Setup 'Timer:inst3|minute'
+Slack : -0.215
+TNS   : -0.788
+
+Type  : Fast 1200mV 0C Model Setup 'Timer:inst3|q0'
+Slack : -0.080
+TNS   : -0.169
+
+Type  : Fast 1200mV 0C Model Setup 'Timer:inst3|clk_9375'
+Slack : -0.010
+TNS   : -0.016
+
+Type  : Fast 1200mV 0C Model Setup 'Timer:inst3|ten_second'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Timer:inst3|second'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK'
+Slack : -0.127
+TNS   : -0.127
+
+Type  : Fast 1200mV 0C Model Hold 'LED_dot_matrix:inst2|clk_9375'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Timer:inst3|minute'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Timer:inst3|ten_second'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Timer:inst3|q0'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Timer:inst3|second'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Timer:inst3|clk_9375'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Timer:inst3|clk_9375'
+Slack : -1.300
+TNS   : -11.700
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK'
+Slack : -1.282
+TNS   : -74.166
+
+Type  : Fast 1200mV 0C Model Recovery 'LED_dot_matrix:inst2|clk_9375'
+Slack : -1.237
+TNS   : -35.666
+
+Type  : Fast 1200mV 0C Model Recovery 'Timer:inst3|minute'
+Slack : -1.044
+TNS   : -4.176
+
+Type  : Fast 1200mV 0C Model Recovery 'Timer:inst3|second'
+Slack : -0.922
+TNS   : -5.530
+
+Type  : Fast 1200mV 0C Model Recovery 'Timer:inst3|ten_second'
+Slack : -0.917
+TNS   : -4.585
+
+Type  : Fast 1200mV 0C Model Recovery 'Timer:inst3|q0'
+Slack : -0.693
+TNS   : -10.605
+
+Type  : Fast 1200mV 0C Model Removal 'Timer:inst3|q0'
+Slack : 0.778
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Timer:inst3|ten_second'
+Slack : 1.249
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Timer:inst3|second'
+Slack : 1.255
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'LED_dot_matrix:inst2|clk_9375'
+Slack : 1.379
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Timer:inst3|minute'
+Slack : 1.383
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK'
+Slack : 1.428
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Timer:inst3|clk_9375'
+Slack : 1.604
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -114.298
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LED_dot_matrix:inst2|clk_9375'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|q0'
+Slack : -1.000
+TNS   : -17.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|clk_9375'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|second'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Seven_segment_digital_tube_choose:inst1|clk_div'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|ten_second'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timer:inst3|minute'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

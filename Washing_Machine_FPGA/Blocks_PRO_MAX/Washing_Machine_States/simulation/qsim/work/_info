@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\qqnemo30\Desktop\FPGA\Blocks\Washing_Machine_States\simulation\qsim
+vWashing_Machine_States
+Z1 !s100 P782C_fd15HWQma`GIEzA1
+Z2 I=bzD:A4M@6<kW?lGH^mCS2
+Z3 Vg<=53bf59C?Z1JbWANoIF0
+Z4 dC:\Users\qqnemo30\Desktop\FPGA_Washing_Machine_PRO_MAX\Blocks_PRO_MAX\Washing_Machine_States\simulation\qsim
+Z5 w1641921041
+Z6 8Washing_Machine_States.vo
+Z7 FWashing_Machine_States.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Washing_Machine_States.vo|
+Z10 o-work work -O0
+Z11 n@washing_@machine_@states
+!i10b 1
+!s85 0
+Z12 !s108 1641921042.750000
+Z13 !s107 Washing_Machine_States.vo|
+!s101 -O0
+vWashing_Machine_States_vlg_check_tst
+!i10b 1
+!s100 IfnUhKIdG1O2i@X_l8iZE1
+Il;EFOKPjO_]UmDkM>kEVK0
+Z14 VC0^l@ASFi4kIL30F<=zm_0
+R4
+Z15 w1641921040
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 73
+R8
+r1
+!s85 0
+31
+Z18 !s108 1641921042.830000
+Z19 !s107 Waveform.vwf.vt|
+Z20 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z21 n@washing_@machine_@states_vlg_check_tst
+vWashing_Machine_States_vlg_sample_tst
+!i10b 1
+Z22 !s100 8C=oFG>ThfN48kMeL1TXX3
+Z23 I3]XF^n<a>VM1mEoJ`LNV?2
+Z24 Vml^J?5`4LoZo3c;G9PcFa2
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z25 n@washing_@machine_@states_vlg_sample_tst
+vWashing_Machine_States_vlg_vec_tst
+!i10b 1
+!s100 T?3:chfIZOGVaeB9S31M;3
+I8ICYjiW18lT0f=2f@LloJ1
+Z26 VhFTN9Yd@:1Dk?jaiKhKge3
+R4
+R15
+R16
+R17
+Z27 L0 392
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z28 n@washing_@machine_@states_vlg_vec_tst

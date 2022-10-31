@@ -1,0 +1,978 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "12/09/2021 21:25:32"
+
+// 
+// Device: Altera EP3C5F256C6 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Washing_Machine_States (
+	clk,
+	rst,
+	clr,
+	Start,
+	\End ,
+	Water_level,
+	Led_free,
+	Led_water_supply,
+	Led_rinsing,
+	Led_water_draining,
+	Led_dehydrating,
+	Led_warning,
+	Rinsing_timer,
+	Draining_timer,
+	Dehydrating_timer,
+	Warning_timer);
+input 	clk;
+input 	rst;
+output 	clr;
+input 	Start;
+input 	\End ;
+input 	Water_level;
+output 	Led_free;
+output 	Led_water_supply;
+output 	Led_rinsing;
+output 	Led_water_draining;
+output 	Led_dehydrating;
+output 	Led_warning;
+input 	Rinsing_timer;
+input 	Draining_timer;
+input 	Dehydrating_timer;
+input 	Warning_timer;
+
+// Design Ports Information
+// clr	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Led_free	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Led_water_supply	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Led_rinsing	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Led_water_draining	=>  Location: PIN_B14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Led_dehydrating	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Led_warning	=>  Location: PIN_B12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Dehydrating_timer	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// End	=>  Location: PIN_E15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Draining_timer	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Rinsing_timer	=>  Location: PIN_A12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Water_level	=>  Location: PIN_E11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rst	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Warning_timer	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Start	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("Washing_Machine_States_6_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \clr~output_o ;
+wire \Led_free~output_o ;
+wire \Led_water_supply~output_o ;
+wire \Led_rinsing~output_o ;
+wire \Led_water_draining~output_o ;
+wire \Led_dehydrating~output_o ;
+wire \Led_warning~output_o ;
+wire \clk~input_o ;
+wire \clk~inputclkctrl_outclk ;
+wire \End~input_o ;
+wire \Dehydrating_timer~input_o ;
+wire \Draining_timer~input_o ;
+wire \Rinsing_timer~input_o ;
+wire \Water_level~input_o ;
+wire \Start~input_o ;
+wire \Warning_timer~input_o ;
+wire \Selector11~0_combout ;
+wire \state.Warning~feeder_combout ;
+wire \rst~input_o ;
+wire \rst~inputclkctrl_outclk ;
+wire \state.Warning~q ;
+wire \Selector0~1_combout ;
+wire \Selector0~2_combout ;
+wire \Selector0~3_combout ;
+wire \state.Free~q ;
+wire \Selector7~0_combout ;
+wire \Selector7~1_combout ;
+wire \state.Water_supply~feeder_combout ;
+wire \state.Water_supply~q ;
+wire \Selector12~3_combout ;
+wire \Selector8~0_combout ;
+wire \state.Rinsing~feeder_combout ;
+wire \state.Rinsing~q ;
+wire \Selector12~2_combout ;
+wire \Selector9~0_combout ;
+wire \state.Water_draining~feeder_combout ;
+wire \state.Water_draining~q ;
+wire \Selector12~1_combout ;
+wire \Selector10~0_combout ;
+wire \state.Dehydrating~q ;
+wire \Selector12~0_combout ;
+wire \Selector12~4_combout ;
+wire \clr~reg0_q ;
+wire \Selector6~0_combout ;
+wire \Selector0~0_combout ;
+wire \Selector6~1_combout ;
+wire \Led_free~reg0_q ;
+wire \Led_water_supply~reg0_q ;
+wire \Led_rinsing~reg0_q ;
+wire \Led_water_draining~reg0_q ;
+wire \Led_dehydrating~reg0_q ;
+wire \Led_warning~reg0_q ;
+
+
+// Location: IOOBUF_X30_Y24_N23
+cycloneiii_io_obuf \clr~output (
+	.i(!\clr~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\clr~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \clr~output .bus_hold = "false";
+defparam \clr~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y24_N23
+cycloneiii_io_obuf \Led_free~output (
+	.i(\Led_free~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Led_free~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Led_free~output .bus_hold = "false";
+defparam \Led_free~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X23_Y24_N9
+cycloneiii_io_obuf \Led_water_supply~output (
+	.i(!\Led_water_supply~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Led_water_supply~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Led_water_supply~output .bus_hold = "false";
+defparam \Led_water_supply~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X25_Y24_N16
+cycloneiii_io_obuf \Led_rinsing~output (
+	.i(!\Led_rinsing~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Led_rinsing~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Led_rinsing~output .bus_hold = "false";
+defparam \Led_rinsing~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y24_N9
+cycloneiii_io_obuf \Led_water_draining~output (
+	.i(!\Led_water_draining~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Led_water_draining~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Led_water_draining~output .bus_hold = "false";
+defparam \Led_water_draining~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y24_N2
+cycloneiii_io_obuf \Led_dehydrating~output (
+	.i(!\Led_dehydrating~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Led_dehydrating~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Led_dehydrating~output .bus_hold = "false";
+defparam \Led_dehydrating~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X25_Y24_N9
+cycloneiii_io_obuf \Led_warning~output (
+	.i(!\Led_warning~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Led_warning~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Led_warning~output .bus_hold = "false";
+defparam \Led_warning~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N1
+cycloneiii_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G4
+cycloneiii_clkctrl \clk~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\clk~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\clk~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \clk~inputclkctrl .clock_type = "global clock";
+defparam \clk~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N1
+cycloneiii_io_ibuf \End~input (
+	.i(\End ),
+	.ibar(gnd),
+	.o(\End~input_o ));
+// synopsys translate_off
+defparam \End~input .bus_hold = "false";
+defparam \End~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N8
+cycloneiii_io_ibuf \Dehydrating_timer~input (
+	.i(Dehydrating_timer),
+	.ibar(gnd),
+	.o(\Dehydrating_timer~input_o ));
+// synopsys translate_off
+defparam \Dehydrating_timer~input .bus_hold = "false";
+defparam \Dehydrating_timer~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X30_Y24_N1
+cycloneiii_io_ibuf \Draining_timer~input (
+	.i(Draining_timer),
+	.ibar(gnd),
+	.o(\Draining_timer~input_o ));
+// synopsys translate_off
+defparam \Draining_timer~input .bus_hold = "false";
+defparam \Draining_timer~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X25_Y24_N1
+cycloneiii_io_ibuf \Rinsing_timer~input (
+	.i(Rinsing_timer),
+	.ibar(gnd),
+	.o(\Rinsing_timer~input_o ));
+// synopsys translate_off
+defparam \Rinsing_timer~input .bus_hold = "false";
+defparam \Rinsing_timer~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X28_Y24_N15
+cycloneiii_io_ibuf \Water_level~input (
+	.i(Water_level),
+	.ibar(gnd),
+	.o(\Water_level~input_o ));
+// synopsys translate_off
+defparam \Water_level~input .bus_hold = "false";
+defparam \Water_level~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X30_Y24_N8
+cycloneiii_io_ibuf \Start~input (
+	.i(Start),
+	.ibar(gnd),
+	.o(\Start~input_o ));
+// synopsys translate_off
+defparam \Start~input .bus_hold = "false";
+defparam \Start~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X25_Y24_N22
+cycloneiii_io_ibuf \Warning_timer~input (
+	.i(Warning_timer),
+	.ibar(gnd),
+	.o(\Warning_timer~input_o ));
+// synopsys translate_off
+defparam \Warning_timer~input .bus_hold = "false";
+defparam \Warning_timer~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N24
+cycloneiii_lcell_comb \Selector11~0 (
+// Equation(s):
+// \Selector11~0_combout  = ((\End~input_o  & (\Warning_timer~input_o  & \state.Warning~q ))) # (!\Selector12~0_combout )
+
+	.dataa(\End~input_o ),
+	.datab(\Warning_timer~input_o ),
+	.datac(\state.Warning~q ),
+	.datad(\Selector12~0_combout ),
+	.cin(gnd),
+	.combout(\Selector11~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector11~0 .lut_mask = 16'h80FF;
+defparam \Selector11~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N14
+cycloneiii_lcell_comb \state.Warning~feeder (
+// Equation(s):
+// \state.Warning~feeder_combout  = \Selector11~0_combout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Selector11~0_combout ),
+	.cin(gnd),
+	.combout(\state.Warning~feeder_combout ),
+	.cout());
+// synopsys translate_off
+defparam \state.Warning~feeder .lut_mask = 16'hFF00;
+defparam \state.Warning~feeder .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N8
+cycloneiii_io_ibuf \rst~input (
+	.i(rst),
+	.ibar(gnd),
+	.o(\rst~input_o ));
+// synopsys translate_off
+defparam \rst~input .bus_hold = "false";
+defparam \rst~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneiii_clkctrl \rst~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\rst~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\rst~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \rst~inputclkctrl .clock_type = "global clock";
+defparam \rst~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N15
+dffeas \state.Warning (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\state.Warning~feeder_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.Warning~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.Warning .is_wysiwyg = "true";
+defparam \state.Warning .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N0
+cycloneiii_lcell_comb \Selector0~1 (
+// Equation(s):
+// \Selector0~1_combout  = (\state.Rinsing~q ) # ((\state.Water_draining~q ) # ((\state.Water_supply~q ) # (\state.Dehydrating~q )))
+
+	.dataa(\state.Rinsing~q ),
+	.datab(\state.Water_draining~q ),
+	.datac(\state.Water_supply~q ),
+	.datad(\state.Dehydrating~q ),
+	.cin(gnd),
+	.combout(\Selector0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector0~1 .lut_mask = 16'hFFFE;
+defparam \Selector0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N10
+cycloneiii_lcell_comb \Selector0~2 (
+// Equation(s):
+// \Selector0~2_combout  = (\End~input_o  & (!\Warning_timer~input_o  & (\state.Warning~q ))) # (!\End~input_o  & (((\state.Warning~q ) # (\Selector0~1_combout ))))
+
+	.dataa(\End~input_o ),
+	.datab(\Warning_timer~input_o ),
+	.datac(\state.Warning~q ),
+	.datad(\Selector0~1_combout ),
+	.cin(gnd),
+	.combout(\Selector0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector0~2 .lut_mask = 16'h7570;
+defparam \Selector0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N18
+cycloneiii_lcell_comb \Selector0~3 (
+// Equation(s):
+// \Selector0~3_combout  = (!\Selector0~2_combout  & ((\state.Free~q ) # (!\Start~input_o )))
+
+	.dataa(gnd),
+	.datab(\Start~input_o ),
+	.datac(\state.Free~q ),
+	.datad(\Selector0~2_combout ),
+	.cin(gnd),
+	.combout(\Selector0~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector0~3 .lut_mask = 16'h00F3;
+defparam \Selector0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N19
+dffeas \state.Free (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector0~3_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.Free~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.Free .is_wysiwyg = "true";
+defparam \state.Free .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N26
+cycloneiii_lcell_comb \Selector7~0 (
+// Equation(s):
+// \Selector7~0_combout  = (\Start~input_o ) # (\state.Free~q )
+
+	.dataa(gnd),
+	.datab(\Start~input_o ),
+	.datac(gnd),
+	.datad(\state.Free~q ),
+	.cin(gnd),
+	.combout(\Selector7~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector7~0 .lut_mask = 16'hFFCC;
+defparam \Selector7~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X28_Y23_N18
+cycloneiii_lcell_comb \Selector7~1 (
+// Equation(s):
+// \Selector7~1_combout  = ((\Water_level~input_o  & (\End~input_o  & \state.Water_supply~q ))) # (!\Selector7~0_combout )
+
+	.dataa(\Water_level~input_o ),
+	.datab(\End~input_o ),
+	.datac(\state.Water_supply~q ),
+	.datad(\Selector7~0_combout ),
+	.cin(gnd),
+	.combout(\Selector7~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector7~1 .lut_mask = 16'h80FF;
+defparam \Selector7~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X28_Y23_N24
+cycloneiii_lcell_comb \state.Water_supply~feeder (
+// Equation(s):
+// \state.Water_supply~feeder_combout  = \Selector7~1_combout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Selector7~1_combout ),
+	.cin(gnd),
+	.combout(\state.Water_supply~feeder_combout ),
+	.cout());
+// synopsys translate_off
+defparam \state.Water_supply~feeder .lut_mask = 16'hFF00;
+defparam \state.Water_supply~feeder .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X28_Y23_N25
+dffeas \state.Water_supply (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\state.Water_supply~feeder_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.Water_supply~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.Water_supply .is_wysiwyg = "true";
+defparam \state.Water_supply .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X28_Y23_N22
+cycloneiii_lcell_comb \Selector12~3 (
+// Equation(s):
+// \Selector12~3_combout  = (\Water_level~input_o ) # ((!\state.Water_supply~q ) # (!\End~input_o ))
+
+	.dataa(\Water_level~input_o ),
+	.datab(gnd),
+	.datac(\End~input_o ),
+	.datad(\state.Water_supply~q ),
+	.cin(gnd),
+	.combout(\Selector12~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector12~3 .lut_mask = 16'hAFFF;
+defparam \Selector12~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N30
+cycloneiii_lcell_comb \Selector8~0 (
+// Equation(s):
+// \Selector8~0_combout  = ((\End~input_o  & (\Rinsing_timer~input_o  & \state.Rinsing~q ))) # (!\Selector12~3_combout )
+
+	.dataa(\End~input_o ),
+	.datab(\Rinsing_timer~input_o ),
+	.datac(\state.Rinsing~q ),
+	.datad(\Selector12~3_combout ),
+	.cin(gnd),
+	.combout(\Selector8~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector8~0 .lut_mask = 16'h80FF;
+defparam \Selector8~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N22
+cycloneiii_lcell_comb \state.Rinsing~feeder (
+// Equation(s):
+// \state.Rinsing~feeder_combout  = \Selector8~0_combout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\Selector8~0_combout ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\state.Rinsing~feeder_combout ),
+	.cout());
+// synopsys translate_off
+defparam \state.Rinsing~feeder .lut_mask = 16'hF0F0;
+defparam \state.Rinsing~feeder .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N23
+dffeas \state.Rinsing (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\state.Rinsing~feeder_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.Rinsing~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.Rinsing .is_wysiwyg = "true";
+defparam \state.Rinsing .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N28
+cycloneiii_lcell_comb \Selector12~2 (
+// Equation(s):
+// \Selector12~2_combout  = ((\Rinsing_timer~input_o ) # (!\state.Rinsing~q )) # (!\End~input_o )
+
+	.dataa(\End~input_o ),
+	.datab(\Rinsing_timer~input_o ),
+	.datac(\state.Rinsing~q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Selector12~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector12~2 .lut_mask = 16'hDFDF;
+defparam \Selector12~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N20
+cycloneiii_lcell_comb \Selector9~0 (
+// Equation(s):
+// \Selector9~0_combout  = ((\End~input_o  & (\Draining_timer~input_o  & \state.Water_draining~q ))) # (!\Selector12~2_combout )
+
+	.dataa(\End~input_o ),
+	.datab(\Draining_timer~input_o ),
+	.datac(\state.Water_draining~q ),
+	.datad(\Selector12~2_combout ),
+	.cin(gnd),
+	.combout(\Selector9~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector9~0 .lut_mask = 16'h80FF;
+defparam \Selector9~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N2
+cycloneiii_lcell_comb \state.Water_draining~feeder (
+// Equation(s):
+// \state.Water_draining~feeder_combout  = \Selector9~0_combout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Selector9~0_combout ),
+	.cin(gnd),
+	.combout(\state.Water_draining~feeder_combout ),
+	.cout());
+// synopsys translate_off
+defparam \state.Water_draining~feeder .lut_mask = 16'hFF00;
+defparam \state.Water_draining~feeder .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N3
+dffeas \state.Water_draining (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\state.Water_draining~feeder_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.Water_draining~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.Water_draining .is_wysiwyg = "true";
+defparam \state.Water_draining .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N16
+cycloneiii_lcell_comb \Selector12~1 (
+// Equation(s):
+// \Selector12~1_combout  = ((\Draining_timer~input_o ) # (!\state.Water_draining~q )) # (!\End~input_o )
+
+	.dataa(\End~input_o ),
+	.datab(\Draining_timer~input_o ),
+	.datac(gnd),
+	.datad(\state.Water_draining~q ),
+	.cin(gnd),
+	.combout(\Selector12~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector12~1 .lut_mask = 16'hDDFF;
+defparam \Selector12~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N6
+cycloneiii_lcell_comb \Selector10~0 (
+// Equation(s):
+// \Selector10~0_combout  = ((\End~input_o  & (\Dehydrating_timer~input_o  & \state.Dehydrating~q ))) # (!\Selector12~1_combout )
+
+	.dataa(\End~input_o ),
+	.datab(\Dehydrating_timer~input_o ),
+	.datac(\state.Dehydrating~q ),
+	.datad(\Selector12~1_combout ),
+	.cin(gnd),
+	.combout(\Selector10~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector10~0 .lut_mask = 16'h80FF;
+defparam \Selector10~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N7
+dffeas \state.Dehydrating (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector10~0_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.Dehydrating~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.Dehydrating .is_wysiwyg = "true";
+defparam \state.Dehydrating .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N12
+cycloneiii_lcell_comb \Selector12~0 (
+// Equation(s):
+// \Selector12~0_combout  = ((\Dehydrating_timer~input_o ) # (!\state.Dehydrating~q )) # (!\End~input_o )
+
+	.dataa(\End~input_o ),
+	.datab(\Dehydrating_timer~input_o ),
+	.datac(gnd),
+	.datad(\state.Dehydrating~q ),
+	.cin(gnd),
+	.combout(\Selector12~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector12~0 .lut_mask = 16'hDDFF;
+defparam \Selector12~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N4
+cycloneiii_lcell_comb \Selector12~4 (
+// Equation(s):
+// \Selector12~4_combout  = (((!\Selector12~3_combout ) # (!\Selector12~1_combout )) # (!\Selector12~2_combout )) # (!\Selector12~0_combout )
+
+	.dataa(\Selector12~0_combout ),
+	.datab(\Selector12~2_combout ),
+	.datac(\Selector12~1_combout ),
+	.datad(\Selector12~3_combout ),
+	.cin(gnd),
+	.combout(\Selector12~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector12~4 .lut_mask = 16'h7FFF;
+defparam \Selector12~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N5
+dffeas \clr~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector12~4_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\clr~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \clr~reg0 .is_wysiwyg = "true";
+defparam \clr~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X29_Y23_N8
+cycloneiii_lcell_comb \Selector6~0 (
+// Equation(s):
+// \Selector6~0_combout  = (\Warning_timer~input_o  & ((\state.Warning~q ) # ((!\Draining_timer~input_o  & \state.Water_draining~q )))) # (!\Warning_timer~input_o  & (!\Draining_timer~input_o  & ((\state.Water_draining~q ))))
+
+	.dataa(\Warning_timer~input_o ),
+	.datab(\Draining_timer~input_o ),
+	.datac(\state.Warning~q ),
+	.datad(\state.Water_draining~q ),
+	.cin(gnd),
+	.combout(\Selector6~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector6~0 .lut_mask = 16'hB3A0;
+defparam \Selector6~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X28_Y23_N20
+cycloneiii_lcell_comb \Selector0~0 (
+// Equation(s):
+// \Selector0~0_combout  = (!\state.Water_supply~q  & (!\state.Dehydrating~q  & !\state.Rinsing~q ))
+
+	.dataa(gnd),
+	.datab(\state.Water_supply~q ),
+	.datac(\state.Dehydrating~q ),
+	.datad(\state.Rinsing~q ),
+	.cin(gnd),
+	.combout(\Selector0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector0~0 .lut_mask = 16'h0003;
+defparam \Selector0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X28_Y23_N12
+cycloneiii_lcell_comb \Selector6~1 (
+// Equation(s):
+// \Selector6~1_combout  = ((\End~input_o  & ((\Selector6~0_combout ) # (!\Selector0~0_combout )))) # (!\Selector7~0_combout )
+
+	.dataa(\End~input_o ),
+	.datab(\Selector7~0_combout ),
+	.datac(\Selector6~0_combout ),
+	.datad(\Selector0~0_combout ),
+	.cin(gnd),
+	.combout(\Selector6~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector6~1 .lut_mask = 16'hB3BB;
+defparam \Selector6~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X28_Y23_N13
+dffeas \Led_free~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector6~1_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Led_free~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Led_free~reg0 .is_wysiwyg = "true";
+defparam \Led_free~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X28_Y23_N19
+dffeas \Led_water_supply~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector7~1_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Led_water_supply~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Led_water_supply~reg0 .is_wysiwyg = "true";
+defparam \Led_water_supply~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N31
+dffeas \Led_rinsing~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector8~0_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Led_rinsing~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Led_rinsing~reg0 .is_wysiwyg = "true";
+defparam \Led_rinsing~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N21
+dffeas \Led_water_draining~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector9~0_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Led_water_draining~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Led_water_draining~reg0 .is_wysiwyg = "true";
+defparam \Led_water_draining~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N27
+dffeas \Led_dehydrating~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\Selector10~0_combout ),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Led_dehydrating~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Led_dehydrating~reg0 .is_wysiwyg = "true";
+defparam \Led_dehydrating~reg0 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X29_Y23_N25
+dffeas \Led_warning~reg0 (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\Selector11~0_combout ),
+	.asdata(vcc),
+	.clrn(\rst~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Led_warning~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Led_warning~reg0 .is_wysiwyg = "true";
+defparam \Led_warning~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign clr = \clr~output_o ;
+
+assign Led_free = \Led_free~output_o ;
+
+assign Led_water_supply = \Led_water_supply~output_o ;
+
+assign Led_rinsing = \Led_rinsing~output_o ;
+
+assign Led_water_draining = \Led_water_draining~output_o ;
+
+assign Led_dehydrating = \Led_dehydrating~output_o ;
+
+assign Led_warning = \Led_warning~output_o ;
+
+endmodule

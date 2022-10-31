@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\qqnemo30\Desktop\FPGA\Blocks\Timer\simulation\qsim
+vTimer
+Z1 !s100 <nVJONnT[jXzfDOEei=AE3
+Z2 I3a<IUDI<6ZZcUo_W[>YzR3
+Z3 V4_5Y<<h;ONM4?l`[BHlS23
+Z4 dC:\Users\qqnemo30\Desktop\FPGA_Washing_Machine_PRO_MAX\Blocks_PRO_MAX\Timer\simulation\qsim
+Z5 w1642002343
+Z6 8Timer.vo
+Z7 FTimer.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Timer.vo|
+Z10 o-work work -O0
+Z11 n@timer
+!i10b 1
+!s85 0
+Z12 !s108 1642002344.684000
+Z13 !s107 Timer.vo|
+!s101 -O0
+vTimer_vlg_check_tst
+!i10b 1
+!s100 nN0de_i?5PN@OS;X`elg01
+IJSgHE=;P6?IZcjgdmg9io0
+Z14 VdH@9][Zj]PGLO<fMS9U>B0
+R4
+Z15 w1642002342
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z18 !s108 1642002344.778000
+Z19 !s107 Waveform.vwf.vt|
+Z20 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z21 n@timer_vlg_check_tst
+vTimer_vlg_sample_tst
+!i10b 1
+Z22 !s100 2]1:H3AeM9FZK7QWUKI843
+Z23 IfWEAC7OZZIPmH@I>`:Go23
+Z24 VObVom8jU_i]WATJIcTL[W0
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z25 n@timer_vlg_sample_tst
+vTimer_vlg_vec_tst
+!i10b 1
+!s100 <>7AJoi=IJESgOELoPnod2
+Ihjd<]ZU<^YRJJAD:FRanR0
+Z26 VT1D=5_3F1C@bfN^UPAd7J3
+R4
+R15
+R16
+R17
+L0 588
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z27 n@timer_vlg_vec_tst

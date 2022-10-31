@@ -1,0 +1,39 @@
+|Breathing_LED
+clk => led.CLK
+clk => cnt_1200ms_en.CLK
+clk => cnt_1200ms[0].CLK
+clk => cnt_1200ms[1].CLK
+clk => cnt_1200ms[2].CLK
+clk => cnt_1200ms[3].CLK
+clk => cnt_1200ms[4].CLK
+clk => cnt_1200ms[5].CLK
+clk => cnt_1200ms[6].CLK
+clk => cnt_1200ms[7].CLK
+clk => cnt_1200ms[8].CLK
+clk => cnt_3ms[0].CLK
+clk => cnt_3ms[1].CLK
+clk => cnt_3ms[2].CLK
+clk => cnt_3ms[3].CLK
+clk => cnt_3ms[4].CLK
+clk => cnt_3ms[5].CLK
+clk => cnt_3ms[6].CLK
+clk => cnt_3ms[7].CLK
+clk => cnt_3ms[8].CLK
+clk => cnt_3ms[9].CLK
+clk => cnt_90posclk[0].CLK
+clk => cnt_90posclk[1].CLK
+clk => cnt_90posclk[2].CLK
+clk => cnt_90posclk[3].CLK
+clk => cnt_90posclk[4].CLK
+clk => cnt_90posclk[5].CLK
+clk => cnt_90posclk[6].CLK
+rst => cnt_1200ms[8].IN0
+rst => cnt_3ms[9].IN0
+rst => cnt_90posclk[6].IN0
+clr => cnt_1200ms[8].IN1
+clr => cnt_3ms[9].IN1
+clr => cnt_90posclk[6].IN1
+led_en => led_out.IN1
+led_out <= led_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

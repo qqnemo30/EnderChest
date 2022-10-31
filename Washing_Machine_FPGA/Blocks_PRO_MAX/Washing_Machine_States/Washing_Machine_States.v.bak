@@ -1,0 +1,161 @@
+
+
+//洗衣机状态描述
+
+module Washing_Machine(clk, rst, clr, Start, End, Water_level,
+							  Led_free, Led_water_supply, Led_rinsing, Led_water_draining, Led_dehydrating, Led_warning,
+							  Rinsing_timer, Draining_timer, Dehydrating_timer, Warning_timer);
+	input clk, rst, Start_button, End_button, Water_level, Rinsing_timer, Draining_timer, Dehydrating_timer, Warning_timer;
+	output reg Led_fre, Led_wsp, Led_rin, Led_wdr, Led_dhd, Led_war;
+
+	reg [2:0] state;
+	localparam Free = 3'b000;
+	localparam Water_supply = 3'b001;
+	localparam Rinsing = 3'b010;
+	localparam Water_draining = 3'b011;
+	localparam Dehydrating = 3'b100;
+	localparam Warning = 3'b101;
+	
+	output reg clr;
+
+	always @(posedge clk or negedge rst)
+		begin
+			if (!rst)
+				begin
+					state <= Free;
+					Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+					clr <= 1;
+				end	
+			else
+				begin
+					case(state)
+						Free:
+							begin
+								if (End_button == 1) 
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else if (Start_button == 0) 
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else
+									begin
+										state <= Water_supply;
+										Led_wsp <= 0; Led_fre <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+							end	
+						Water_supply:
+							begin
+								if (End_button == 1)
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else if (Water_level == 0)
+									begin
+										state <= Water_supply;
+										Led_wsp <= 0; Led_fre <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else
+									begin
+										state <= Rinsing;
+										Led_rin <= 0; Led_fre <= 1; Led_wsp <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 0;
+									end
+							end
+						Rinsing:
+							begin
+								if (End_button == 1)
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else if (Rinsing_timer == 0)
+									begin
+										state <= Rinsing;
+										Led_rin <= 0; Led_fre <= 1; Led_wsp <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else
+									begin
+										state <= Water_draining;
+										Led_wdr <= 0; Led_fre <= 1; Led_wsp <= 1; Led_rin <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 0;
+									end
+							end	
+						Water_draining:
+							begin
+								if (End_button == 1)
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else if (Draining_timer == 0)
+									begin
+										state <= Water_draining;
+										Led_wdr <= 0; Led_fre <= 1; Led_wsp <= 1; Led_rin <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else
+									begin
+										state <= Dehydrating;
+										Led_dhd <= 0; Led_fre <= 1; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_war <= 1;
+										clr <= 0;
+									end
+							end
+						Dehydrating:
+							begin
+								if (End_button == 1)
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else if (Dehydrating_timer == 0)
+									begin
+										state <= Dehydrating;
+										Led_dhd <= 0; Led_fre <= 1; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else
+									begin
+										state <= Warning;
+										Led_war <= 0; Led_fre <= 1; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1;
+										clr <= 0;
+									end
+							end
+						Warning:
+							begin
+								if (End_button == 1)
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+								else if (Warning_timer == 0)
+									begin
+										state <= Warning;
+										Led_war <= 0; Led_fre <= 1; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1;
+										clr <= 1;
+									end
+								else
+									begin
+										state <= Free;
+										Led_fre <= 0; Led_wsp <= 1; Led_rin <= 1; Led_wdr <= 1; Led_dhd <= 1; Led_war <= 1;
+										clr <= 1;
+									end
+							end
+					endcase
+				end
+		end
+endmodule
