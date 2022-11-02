@@ -105,7 +105,7 @@
                     <p id="web">没错，就是本站！</p>
                 </div>
                 <div class="tag3">
-                    <a href="https://github.com/qqnemo30/EnderChest/tree/main/Saving_Animals_Game">
+                    <a href="https://github.com/qqnemo30/EnderChest/tree/main/Mia_qqnemo30_Homepage">
                         <img src="../SRC/GitHub.png">
                     </a>
                 </div>
