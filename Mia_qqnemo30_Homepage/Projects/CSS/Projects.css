@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+}
+ 
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+    background-image: url(../SRC/background.jpg);
+	background-position: center center; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+	background-size: cover;
+}
+.projects {
+    position : absolute;
+	width : 100%;
+	height : 110%;
+    display: flex;
+    flex-flow: row;
+}
+.leftside {
+    width: 33.33%;
+    height: 160%;
+    display: flex;
+    flex-flow: column;
+}
+.left1 {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 610px;
+    top: 100px;
+    left: 15%;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 4px 4px rgb(64, 64, 64);
+    border-radius: 5px;
+}
+.left1 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    top: 30px;
+    left: 120px;
+}
+.left1 h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+.left1 video {
+    position: absolute;
+    top: 165px;
+    left: 32px;
+}
+#save {
+    color: white;
+    width: 70%;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+    left: 15%;
+    top: 205px;
+}
+.tag1 {
+    position: absolute;
+    top: 460px;
+    width: 100%;
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+.tag1 img {
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 77px;
+    left: 142px;
+}
+.left2 {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 500px;
+    top: 150px;
+    left: 15%;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 4px 4px rgb(64, 64, 64);
+    border-radius: 5px;
+}
+.left2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    top: 25px;
+    left: 120px;
+}
+.left2 h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 18px;
+}
+.left2 video {
+    position: absolute;
+    top: 165px;
+    left: 32px;
+}
+#wash {
+    color: white;
+    width: 70%;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+    left: 16%;
+    top: 180px;
+}
+.tag4 {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+.tag4 img {
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 77px;
+    left: 142px;
+}
+
+
+.middle {
+    width: 33.33%;
+    height: 160%;
+    display: flex;
+    flex-flow: column;
+}
+.title {
+    width: 100%;
+}
+.title h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.title p {
+    color: white;
+    font-size: 18px;
+    line-height: 5px;
+    text-align: center;
+}
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: 30%;
+    height: 50px;
+    position: fixed;
+    display: block;
+    top: 0px;
+    right: 0px;
+    line-height:50px;
+    z-index: 1000;
+}
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 25%;
+    text-decoration: none;
+    position: fiexd;
+}
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    height: 50px;
+}
+.middle1 {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 580px;
+    top: 100px;
+    left: 15%;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 4px 4px rgb(64, 64, 64);
+    border-radius: 5px;
+}
+.middle1 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    top: 27px;
+    left: 127px;
+}
+.middle1 h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+.middle1 video {
+    position: absolute;
+    top: 165px;
+    left: 32px;
+}
+#CPU {
+    color: white;
+    width: 70%;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+    left: 16%;
+    top: 35px;
+}
+.tag2 {
+    position: absolute;
+    top: 430px;
+    width: 100%;
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+.tag2 img {
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 77px;
+    left: 142px;
+}
+.preview img{
+    width: 270px;
+    height: 100%;
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+    top: 30px;
+    left: 35px;
+    cursor: zoom-in;
+}
+#outerdiv {
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.7);
+    width:100%;
+    height:100%;
+    display:none;
+    z-index: 2000;
+    cursor: zoom-out;
+}
+#innerdiv {
+    position:absolute;
+    z-index: 9999;
+}
+#bigimg {
+
+    height: 550px;
+    border:2px solid white;
+    top: 0;
+    left: -10px;
+}
+.middle2 {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 420px;
+    top: 150px;
+    left: 15%;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 4px 4px rgb(64, 64, 64);
+    border-radius: 5px;
+}
+.middle2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    top: 27px;
+    left: 127px;
+}
+.middle2 h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+.empty {
+    position: relative;
+    left: 10%;
+    top: 7%;
+    width: 80%;
+    height: 30%;
+    border: 2px solid white;
+}
+.empty p {
+    top: 50px;
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+    top: -40px;
+}
+.tag5 {
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+.tag5 p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    top: 75px;
+    position: relative;
+}
+
+
+
+.rightside {
+    width: 33.33%;
+    height: 160%;
+    display: flex;
+    flex-flow: column;
+}
+.right1 {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 530px;
+    top: 160px;
+    left: 15%;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 4px 4px rgb(64, 64, 64);
+    border-radius: 5px;
+}
+.right1 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    top: 22px;
+    left: 130px;
+}
+.right1 h1 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+#homepage {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    top: 170px;
+    left: 21px;
+    cursor: pointer;
+}
+#web {
+    color: white;
+    width: 70%;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+    left: 16%;
+    top: 230px;
+}
+.tag3 {
+    position: absolute;
+    top: 380px;
+    width: 100%;
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+.tag3 img {
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 77px;
+    left: 142px;
+}
+.right2 h1 {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 400px;
+}
+
+
+
+
+
+
+

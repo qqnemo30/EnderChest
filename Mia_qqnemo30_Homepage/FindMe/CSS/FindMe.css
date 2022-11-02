@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+ 
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+    background-image: url(../SRC/background.jpg);
+	background-repeat: no-repeat; 
+	background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.FindMe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: block;
+    bottom: 0%;
+    left: 0%;
+    line-height:50px;
+    z-index: 1000;
+    opacity: 0.8;
+}
+/* 导航栏样式 */
+#empty {
+    float: left;
+    display: block;
+    width: 34%;
+    height: 50px;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 8%;
+    text-decoration: none;
+    position: fiexd;
+}
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    height: 50px;
+}
+
+.box {
+    background-color: rgb(64, 64, 64);
+    opacity: 0.8;
+    position: fixed;
+    width: 40%;
+    height: 30%;
+    left: 30%;
+    top: 10%;
+    border: 5px solid rgb(32, 32, 32);
+    border-radius: 10px;
+}
+.title {
+    height: 80px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    top: 30px;
+    text-indent: 50px;
+    letter-spacing: 5px;
+}
+
+
+/*****鼠标悬停跳动动画*****/
+@keyframes play {
+  20% {
+    transform: translate(0,-10px);
+  }
+  40% {
+    transform: scale(1)translate(0,7px);
+  }
+  60% {
+    transform: translate(0,-5px);
+  }
+  80% {
+    transform: scale(1)translate(0,3px);
+  }
+  100% {
+    transform: translate(0,-1px);
+  }
+}
+.icons ul li {
+    float: left;
+    margin: 0 6px;
+    position: relative;
+    list-style: none;
+    display: block;
+    width: 20%;
+    left: 5%;
+    top: 30px;
+
+    
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+.icons ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+}
+.icons ul li span {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    line-height: 23px;
+    position:absolute;
+    bottom: 3px;
+    width: 170px;
+    left: 0;
+    font-size: 12px;
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+.icons ul li:hover {
+    animation: play 0.7s 1 linear;
+}
+

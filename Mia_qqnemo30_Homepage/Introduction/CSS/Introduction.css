@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+ 
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.introduction{
+    position : absolute;
+	width : 100%;
+	height : 160%;
+    display: flex;
+}
+.leftside {
+    width: 350px;
+    height: 160%;
+    background-color: rgb(64, 64, 64);
+
+}
+#portrait {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 250px;
+    left: 100px;
+}
+img {
+    max-height: 100%;
+}
+.leftside h1 {
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 400px;
+    left: 70px;
+}
+.leftside p {
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 160px;
+    left: 95px;
+}
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: 350px;
+    height: 50px;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    line-height:50px;
+}
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 25%;
+    text-decoration: none;
+    position: fiexd;
+}
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    height: 50px;
+}
+
+
+
+.rightside {
+    background-color: rgb(80, 80, 80);
+    flex: 1;
+    height: 162%;
+}
+.rightside h1 {
+    font-size: 30px;
+    color: white;
+    position: relative;
+    display: block;
+    top: 10px;
+    right: 80px;
+    text-align: center;
+}
+#picture1 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 25px;
+    left: 700px;
+}
+#picture2 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 15px;
+    left: 80px;
+}
+#p1 {
+    width: 600px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -500px;
+    left: 30px;
+    text-align: center;
+}
+#p2 {
+    width: 600px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -350px;
+    left: 400px;
+    text-align: center;
+}
+
+.container {
+	width:80%;
+	margin:0 auto;
+	overflow:auto;
+    position: relative;
+    top: -150px;
+}
+.right-content, .left-content {
+	float:left;
+	display:block;
+	width:40%;
+	padding:1% 2%;
+}
+.left-content {
+	border-right:5px dotted rgb(150, 150, 150);	
+	text-align:right;
+}
+.left-content p {
+	margin:150px 0 0;
+}
+.right-content p {
+	margin:80px 0 150px;
+}
+.container p {
+    color: white;
+}
+
+

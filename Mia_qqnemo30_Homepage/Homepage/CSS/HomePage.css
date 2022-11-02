@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+}
+ 
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+.homepage{
+    overflow: auto;
+    height: 100vh;
+    width: calc(100% - 0px);
+    display: flex;
+}
+/* 标题 & 背景图片 */
+.header {
+    color: rgb(255, 255, 255);
+    background-image: url(../SRC/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0%;  
+    width: calc(100% - 350px);
+    height: 100%;
+}
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+    padding-top: 35px;
+    padding-left: 75px;
+    letter-spacing: .2em;
+}
+.main {
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top :75px;
+    left: 75px;
+    transform: translate(0%,100%);
+    font-size: 40px;
+    letter-spacing: .2em;
+   
+}
+.container{
+    margin-right: 5px;
+}
+.delete{
+   /*删除线样式*/
+   border-right: 2px solid white;
+   /*定义动画 step-end是动画过渡效果，设置step-end代表不过渡 infinite代表时间无限*/
+   animation: blingbling 1s step-end infinite;
+}
+
+/* 链接 */
+.header a {
+    float: right;
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 15px;
+    right: 400px;
+}
+.header a:hover {
+    color: rgb(241, 213, 142);
+}
+
+
+
+.calendar {
+    width: 350px;
+    height: 100%;
+    background: rgb(64, 64, 64);
+}
+.month {
+    font-size: 30px;
+	color: white; 
+    text-align: center;
+    line-height: 10px;
+    padding-top: 10%;
+    position: relative;
+}
+.year {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 7px;
+    position: relative;
+    text-transform: uppercase;
+}
+/*标题的显示样式*/
+.title{
+    height: 70px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: relative;
+    text-align: center;
+}
+/*标题中的月份显示样式*/
+#calendar-title{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 14px 0 0 0;
+}
+/*标题中的年份显示样式*/
+#calendar-year{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+/*上个月的超链接显示样式*/
+#pre{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    background: url(image/pre.png) no-repeat 50% 50%;
+    /*没规定大小时，图片显示 0X0*/
+    width: 60px;
+    height: 70px;
+    color: white;
+    padding-top:10px;
+}
+/*下个月的超链接显示样式*/
+#next{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    background: url(image/next.png) no-repeat 50% 50%;
+    width: 60px;
+    height: 70px;
+    color: white;
+    padding-top:10px;
+}
+.body-list ul{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 91%;
+    box-sizing: border-box;
+}
+.body-list ul li{
+    list-style: none;
+    display: block;
+    width: 14.28%;
+    float: left;
+    /*规定行高，垂直居中*/
+    height: 36px;
+    line-height: 36px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/*设置已经过去的日期颜色*/
+.lightgrey{
+    color:#a8a8a8;
+}
+/*设置将来的日期颜色*/
+.darkgrey{
+    color:#565656;
+}
+/*日期当天用绿色背景绿色文字加以显示*/
+.greenbox{
+    border: 1px solid #666C2C;
+    background: #b1b793;
+}
+
+
+
+/* 挡住大刻度的中间 */
+#calibration-big-cover {
+    width: 82%;
+    height: 82%;
+    top: 9%;
+    left: 9%;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(180, 180, 180);
+    box-sizing: border-box;
+}
+/* 挡住小刻度的中间 */
+#calibration-small-cover {
+    width: 87%;
+    height: 87%;
+    top: 6.5%;
+    left: 6.5%;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(180, 180, 180);
+    box-sizing: border-box;
+}
+/* 小刻度 */
+.calibration-small {
+    background-color: rgb(81, 81, 81);
+    width: 1%;
+    height: 96%;
+    border: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 2%;
+    left: 49.5%;
+    transform: translateX(-50%);
+}
+/* 大刻度 */
+.calibration-big {
+    background-color:rgb(81, 81, 81);
+    width: 2%;
+    height: 100%;
+    border: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0%;
+    left: 49%;
+    transform: translateX(-50%);
+}
+/* 时钟的最外围，可随意设置大小 */
+.clock {
+    margin: auto;
+    top: 475px;
+    right: 68px;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    display: block;
+    overflow: hidden;
+}
+/* 时钟的边框 */
+#clock-border {
+    background-color: rgb(180, 180, 180);
+    border: 6px solid rgb(81, 81, 81);
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* 时针 */
+.hour-hand {
+    width: 3%;
+    height: 48%;
+    border: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 26%;
+    left: 48.5%;
+}
+/* 分针 */
+.min-hand {
+    width: 3%;
+    height: 70%;
+    border: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 15%;
+    left: 48.5%;
+}
+/* 秒针 */
+.sec-hand {
+    width: 2%;
+    height: 76%;
+    border: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 12%;
+    left: 49%;
+}
+/* 指针的显示部分 */
+.clock-show {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 52%;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+
+#d1{
+    width: 75px;
+    height: 75px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 600px;
+    right: 240px;
+}
+img {
+    max-height: 100%;
+}
+
+
+
+.introduction h1 {
+    font-size: 25px ;
+    position: fixed;
+    top: 610px;
+    right: 30px;
+    color: white;
+}
+.introduction p {
+    font-size: 25px;
+    position: fixed;
+    top: 630px;
+    right: 70px;
+    color: white;
+}
+
+
+
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: 350px;
+    height: 50px;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    line-height:50px;
+}
+ 
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 25%;
+    text-decoration: none;
+    position: fiexd;
+    bottom: 0px;
+}
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    height: 50px;
+}
+ 
